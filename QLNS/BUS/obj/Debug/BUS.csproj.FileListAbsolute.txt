@@ -1,0 +1,14 @@
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\bin\Debug\BUS.exe.config
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\bin\Debug\BUS.exe
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\bin\Debug\BUS.pdb
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\bin\Debug\DAL.exe
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\bin\Debug\DAL.pdb
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\bin\Debug\DAL.exe.config
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.exe
+D:\Workspace\C#\BTL_NET(QLNS)\BUS\obj\Debug\BUS.pdb
