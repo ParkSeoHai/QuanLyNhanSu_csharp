@@ -25,7 +25,9 @@ namespace DAL
         bool ThemDuAn(DuAn DA);
         bool SuaDuAn(DuAn DA);
         bool XoaDuAn(DuAn DA);
-        void TimDuAn();
+        DataTable TimDuAn(string query, string param, string txtTimKiem);
+        DataTable TimKiemDA_Ma(string txtMaDA);
+        DataTable TimKiemDA_Ten(string txtTenDA);
         void ThongKeLuongNV();
     }
     public class QuanLy: Person, IQuanLy
@@ -117,8 +119,30 @@ namespace DAL
             if(QuanLyDuAn(DA, query)) { return true; }
             return false;
         }
-        public void TimDuAn() {
-        
+        public DataTable TimDuAn(string query, string param, string txtTimKiem) {
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue($"{param}", txtTimKiem);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch { }
+            finally { conn.Close(); }
+            return dt;
+        }
+        public DataTable TimKiemDA_Ma(string txtMaDA)
+        {
+            string query = "Select * from DuAn where MaDA = @MaDA";
+            return TimDuAn(query, "MaDA", txtMaDA);
+        }
+        public DataTable TimKiemDA_Ten(string txtTenDA)
+        {
+            string query = "Select * from DuAn where TenDA = @TenDA";
+            return TimDuAn(query, "TenDA", txtTenDA);
         }
         public void ThongKeLuongNV() {
         
