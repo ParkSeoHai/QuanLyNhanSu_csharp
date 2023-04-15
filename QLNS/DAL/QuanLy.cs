@@ -20,7 +20,7 @@ namespace DAL
         void SuaPhongBan();
         void XoaPhongBan();
         void TimPhongBan();
-
+        // Dự án
         DataTable HienThiDuAn();
         bool ThemDuAn(DuAn DA);
         bool SuaDuAn(DuAn DA);
@@ -28,6 +28,7 @@ namespace DAL
         DataTable TimDuAn(string query, string param, string txtTimKiem);
         DataTable TimKiemDA_Ma(string txtMaDA);
         DataTable TimKiemDA_Ten(string txtTenDA);
+        // Tính lương và thống kê lương
         void ThongKeLuongNV();
     }
     public class QuanLy: Person, IQuanLy
@@ -143,6 +144,193 @@ namespace DAL
         {
             string query = "Select * from DuAn where TenDA = @TenDA";
             return TimDuAn(query, "TenDA", txtTenDA);
+        }
+        // Chấm công cho nhân viên
+        public bool ChamCongNV(ChamCong CC)
+        {
+            List<ChamCong> listCC = Select_CC(CC.NgayLam, CC.ThangLam, CC.NamLam);
+            foreach(ChamCong item in listCC)
+            {
+                if(item.NgayLam == CC.NgayLam && item.ThangLam == CC.ThangLam && item.NamLam == CC.NamLam && item.MaNV == CC.MaNV)
+                {
+                    return false;
+                }
+            }
+            string query = "INSERT INTO ChamCong VALUES (@NgayLam, @ThangLam, @NamLam, @TrangThai, @GhiChu, @MaNV)";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("NgayLam", CC.NgayLam);
+                cmd.Parameters.AddWithValue("ThangLam", CC.ThangLam);
+                cmd.Parameters.AddWithValue("NamLam", CC.NamLam);
+                cmd.Parameters.AddWithValue("TrangThai", CC.TrangThai);
+                cmd.Parameters.AddWithValue("GhiChu", CC.GhiChu);
+                cmd.Parameters.AddWithValue("MaNV", CC.MaNV);
+                if(cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            } catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Tạo list Chấm công để so sánh khi chấm công nhân viên
+        public List<ChamCong> Select_CC(int NgayLam, int ThangLam, int NamLam)
+        {
+            List<ChamCong> list = new List<ChamCong>();
+            string query = "SELECT NgayLam, ThangLam, NamLam, TrangThai, GhiChu, MaNV FROM ChamCong WHERE NgayLam = @NgayLam AND ThangLam = @ThangLam AND NamLam = @NamLam";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("NgayLam", NgayLam);
+            cmd.Parameters.AddWithValue("ThangLam", ThangLam);
+            cmd.Parameters.AddWithValue("NamLam", NamLam);
+            SqlDataReader read = cmd.ExecuteReader();
+            while(read.Read())
+            {
+                ChamCong temp = new ChamCong();
+                temp.NgayLam = read.GetInt32(0);
+                temp.ThangLam = read.GetInt32(1);
+                temp.NamLam = read.GetInt32(2);
+                temp.TrangThai = read.GetString(3);
+                temp.GhiChu = read.GetString(4);
+                temp.MaNV = read.GetString(5);
+
+                list.Add(temp);
+            }
+            conn.Close();
+            return list;
+        }
+        // Lấy mã nv đã được chấm công trong ngày
+        public List<string> Get_ListMaNV(int day, int month, int year)
+        {
+            List<string> listMaNV = new List<string>();
+            string query = "Select MaNV from ChamCong where NgayLam = @NgayLam and ThangLam = @ThangLam and NamLam = @NamLam";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("NgayLam", day);
+            cmd.Parameters.AddWithValue("ThangLam", month);
+            cmd.Parameters.AddWithValue("NamLam", year);
+            SqlDataReader read = cmd.ExecuteReader();
+            while(read.Read())
+            {
+                string MaNV = read.GetString(0);
+                listMaNV.Add(MaNV);
+            }
+            conn.Close();
+            return listMaNV;
+        }
+        // Hiển thị danh sách nhân viên để chấm công
+        public DataTable HienThiNV_ChamCong()
+        {
+            string query = "SELECT MaNV, HoTen, GioiTinh, ChucVu, ViTriCongViec, MaPB FROM NhanVien";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable("TableNhanVien");
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+        // Hiển thị chi tiết bảng chấm công
+        public DataTable HienThi_CTCC()
+        {
+            DataTable dt = new DataTable();
+            string query = "Select * from ChamCong ORDER BY MaCC DESC";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+        // Hiển thị chi tiết bảng chấm công theo tháng/năm
+        public DataTable HienThi_CTCC_ThangNam(string txtThang, string txtNam)
+        {
+            string query = "Select * from ChamCong where ThangLam = @ThangLam and NamLam = @NamLam ORDER BY NgayLam ASC";
+            DataTable dt = new DataTable();
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("ThangLam", txtThang);
+            cmd.Parameters.AddWithValue("NamLam", txtNam);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+        // Thêm vào bảng chi tiết chấm công
+        public bool Them_CTCC(ChamCong CC)
+        {
+            string query = "Insert into ChamCong values (@NgayLam, @ThangLam, @NamLam, @TrangThai, @GhiChu, @MaNV)";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("NgayLam", CC.NgayLam);
+                cmd.Parameters.AddWithValue("ThangLam", CC.ThangLam);
+                cmd.Parameters.AddWithValue("NamLam", CC.NamLam);
+                cmd.Parameters.AddWithValue("TrangThai", CC.TrangThai);
+                cmd.Parameters.AddWithValue("GhiChu", CC.GhiChu);
+                cmd.Parameters.AddWithValue("MaNV", CC.MaNV);
+                if(cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            } catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Sửa chi tiết chấm công
+        public bool Sua_CTCC(ChamCong CC, string txtMaCC)
+        {
+            string query = "Update ChamCong Set NgayLam = @NgayLam, ThangLam = @ThangLam, NamLam = @NamLam, TrangThai = @TrangThai, GhiChu = @GhiChu, MaNV = @MaNV where MaCC = @MaCC";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaCC", txtMaCC);
+                cmd.Parameters.AddWithValue("NgayLam", CC.NgayLam);
+                cmd.Parameters.AddWithValue("ThangLam", CC.ThangLam);
+                cmd.Parameters.AddWithValue("NamLam", CC.NamLam);
+                cmd.Parameters.AddWithValue("TrangThai", CC.TrangThai);
+                cmd.Parameters.AddWithValue("GhiChu", CC.GhiChu);
+                cmd.Parameters.AddWithValue("MaNV", CC.MaNV);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Xóa chi tiết chấm công
+        public bool Xoa_CTCC(string txtMaCC)
+        {
+            string query = "Delete ChamCong where MaCC = @MaCC";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaCC", txtMaCC);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
         }
         public void ThongKeLuongNV() {
         

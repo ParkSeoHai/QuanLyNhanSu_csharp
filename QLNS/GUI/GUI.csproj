@@ -58,6 +58,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChamCongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamCongNV.Designer.cs">
+      <DependentUpon>frmChamCongNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChiTietChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietChamCong.Designer.cs">
+      <DependentUpon>frmChiTietChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChamCongNV.resx">
+      <DependentUpon>frmChamCongNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietChamCong.resx">
+      <DependentUpon>frmChiTietChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyDuAn.resx">
       <DependentUpon>frmQuanLyDuAn.cs</DependentUpon>

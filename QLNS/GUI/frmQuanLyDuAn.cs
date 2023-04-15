@@ -31,6 +31,12 @@ namespace GUI
         {
             dtGridQLDA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtGridQLDA.DataSource = dt;
+            dtGridQLDA.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtGridQLDA.Columns[0].HeaderText = "Mã DA";
+            dtGridQLDA.Columns[1].HeaderText = "Tên DA";
+            dtGridQLDA.Columns[2].HeaderText = "Số NV";
+            dtGridQLDA.Columns[3].HeaderText = "Mô tả";
+            dtGridQLDA.Columns[4].HeaderText = "Mã PB";
         }
         // Sự kiện cell click
         int index;

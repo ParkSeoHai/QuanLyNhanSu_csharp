@@ -38,3 +38,5 @@ D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.ca
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.exe
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.pdb
+D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.frmChamCongNV.resources
+D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.frmChiTietChamCong.resources
