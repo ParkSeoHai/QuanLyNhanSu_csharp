@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -331,6 +332,54 @@ namespace DAL
             catch { }
             finally { conn.Close(); }
             return false;
+        }
+        
+        // Tính và lấy tổng ngày công
+        public int Get_TongCong(string MaNV, int ThangLam, int NamLam)
+        {
+            string query = "SELECT COUNT(MaNV) FROM ChamCong WHERE MaNV = @MaNV AND TrangThai = N'Làm' AND ThangLam = @ThangLam AND NamLam = @NamLam";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("MaNV", MaNV);
+            cmd.Parameters.AddWithValue("ThangLam", ThangLam);
+            cmd.Parameters.AddWithValue("NamLam", NamLam);
+
+            Int32 TongCong = (Int32) cmd.ExecuteScalar();
+            conn.Close();
+            return TongCong;
+        }
+        // Hiển thị bảng tính lương
+        public List<LuongNV> HienThi_Luong(int ThangLam, int NamLam)
+        {
+            List<LuongNV> ListLuongNV = new List<LuongNV>();
+
+            string query = "SELECT MaNV, HoTen, ChucVu FROM NhanVien";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader read = cmd.ExecuteReader();
+            while(read.Read()) { 
+                LuongNV temp =new LuongNV();
+                temp.MaNV = read.GetString(0);
+                temp.TenNV = read.GetString(1);
+                temp.ChucVu = read.GetString(2);
+                temp.NgayCong = Get_TongCong(temp.MaNV, ThangLam, NamLam);
+                double MucLuong;
+                if (temp.ChucVu.ToUpper() == "NHÂN VIÊN")
+                {
+                    MucLuong = 500000;
+                } else
+                {
+                    MucLuong = 700000;
+                } 
+                temp.MucLuong = MucLuong;
+                temp.TongLuong = temp.NgayCong * MucLuong;
+
+                ListLuongNV.Add(temp);
+            }
+            conn.Close();
+            return ListLuongNV;
         }
         public void ThongKeLuongNV() {
         

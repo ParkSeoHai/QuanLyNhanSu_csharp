@@ -138,9 +138,11 @@ namespace GUI
         // Sự kiện bấm tính lương cho nhân viên
         private void btnTinhLuong_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            frmTinhLuong frmTL = new frmTinhLuong();
+            frmTL.Show();
         }
-        
+
         // Sự kiện click cell datagridView
         int index;
         private void dtGridCTCC_CellClick(object sender, DataGridViewCellEventArgs e)

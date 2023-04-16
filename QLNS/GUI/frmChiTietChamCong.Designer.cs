@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -48,8 +48,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateThoiGianLam = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtMaCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHienThi = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnTimKiem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -63,8 +65,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnXem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dtGridCTCC = new System.Windows.Forms.DataGridView();
-            this.btnHienThi = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtMaCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -137,7 +137,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 48);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
@@ -232,6 +232,7 @@
             this.btnTinhLuong.Size = new System.Drawing.Size(142, 56);
             this.btnTinhLuong.TabIndex = 22;
             this.btnTinhLuong.Text = "Tính lương ";
+            this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
             // 
             // txtGhiChu
             // 
@@ -358,6 +359,32 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Thời gian làm:";
             // 
+            // txtMaCC
+            // 
+            this.txtMaCC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
+            this.txtMaCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaCC.DefaultText = "";
+            this.txtMaCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaCC.Enabled = false;
+            this.txtMaCC.FillColor = System.Drawing.Color.Silver;
+            this.txtMaCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaCC.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtMaCC.ForeColor = System.Drawing.Color.Black;
+            this.txtMaCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaCC.Location = new System.Drawing.Point(113, 34);
+            this.txtMaCC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtMaCC.Name = "txtMaCC";
+            this.txtMaCC.PasswordChar = '\0';
+            this.txtMaCC.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMaCC.PlaceholderText = "";
+            this.txtMaCC.ReadOnly = true;
+            this.txtMaCC.SelectedText = "";
+            this.txtMaCC.Size = new System.Drawing.Size(161, 38);
+            this.txtMaCC.TabIndex = 16;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -381,6 +408,32 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(761, 66);
             this.guna2Panel2.TabIndex = 8;
+            // 
+            // btnHienThi
+            // 
+            this.btnHienThi.BackColor = System.Drawing.Color.Transparent;
+            this.btnHienThi.BorderRadius = 12;
+            this.btnHienThi.BorderThickness = 1;
+            this.btnHienThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHienThi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHienThi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHienThi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHienThi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHienThi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHienThi.FillColor = System.Drawing.Color.White;
+            this.btnHienThi.FillColor2 = System.Drawing.Color.White;
+            this.btnHienThi.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
+            this.btnHienThi.ForeColor = System.Drawing.Color.Black;
+            this.btnHienThi.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnHienThi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
+            this.btnHienThi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
+            this.btnHienThi.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHienThi.Location = new System.Drawing.Point(35, 7);
+            this.btnHienThi.Name = "btnHienThi";
+            this.btnHienThi.Size = new System.Drawing.Size(124, 48);
+            this.btnHienThi.TabIndex = 23;
+            this.btnHienThi.Text = "Hiển thị";
+            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
             // 
             // btnTimKiem
             // 
@@ -626,73 +679,21 @@
             this.dtGridCTCC.Location = new System.Drawing.Point(0, 0);
             this.dtGridCTCC.Name = "dtGridCTCC";
             this.dtGridCTCC.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGridCTCC.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGridCTCC.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGridCTCC.RowHeadersWidth = 62;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dtGridCTCC.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dtGridCTCC.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGridCTCC.RowTemplate.Height = 28;
             this.dtGridCTCC.Size = new System.Drawing.Size(761, 416);
             this.dtGridCTCC.TabIndex = 0;
             this.dtGridCTCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCTCC_CellClick);
-            // 
-            // btnHienThi
-            // 
-            this.btnHienThi.BackColor = System.Drawing.Color.Transparent;
-            this.btnHienThi.BorderRadius = 12;
-            this.btnHienThi.BorderThickness = 1;
-            this.btnHienThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHienThi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHienThi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHienThi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHienThi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHienThi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHienThi.FillColor = System.Drawing.Color.White;
-            this.btnHienThi.FillColor2 = System.Drawing.Color.White;
-            this.btnHienThi.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
-            this.btnHienThi.ForeColor = System.Drawing.Color.Black;
-            this.btnHienThi.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnHienThi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
-            this.btnHienThi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
-            this.btnHienThi.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnHienThi.Location = new System.Drawing.Point(35, 7);
-            this.btnHienThi.Name = "btnHienThi";
-            this.btnHienThi.Size = new System.Drawing.Size(124, 48);
-            this.btnHienThi.TabIndex = 23;
-            this.btnHienThi.Text = "Hiển thị";
-            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click);
-            // 
-            // txtMaCC
-            // 
-            this.txtMaCC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
-            this.txtMaCC.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaCC.DefaultText = "";
-            this.txtMaCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaCC.Enabled = false;
-            this.txtMaCC.FillColor = System.Drawing.Color.Silver;
-            this.txtMaCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaCC.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMaCC.ForeColor = System.Drawing.Color.Black;
-            this.txtMaCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaCC.Location = new System.Drawing.Point(113, 34);
-            this.txtMaCC.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtMaCC.Name = "txtMaCC";
-            this.txtMaCC.PasswordChar = '\0';
-            this.txtMaCC.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaCC.PlaceholderText = "";
-            this.txtMaCC.ReadOnly = true;
-            this.txtMaCC.SelectedText = "";
-            this.txtMaCC.Size = new System.Drawing.Size(161, 38);
-            this.txtMaCC.TabIndex = 16;
             // 
             // frmChiTietChamCong
             // 

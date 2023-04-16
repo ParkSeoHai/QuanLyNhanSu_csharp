@@ -55,6 +55,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LuongNV.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PhongBan.cs" />

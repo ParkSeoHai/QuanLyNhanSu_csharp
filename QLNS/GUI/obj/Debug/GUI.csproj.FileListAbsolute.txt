@@ -40,3 +40,4 @@ D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.exe
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.pdb
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.frmChamCongNV.resources
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.frmChiTietChamCong.resources
+D:\Workspace\C#\BTL_NET(QLNS)\QLNS\GUI\obj\Debug\GUI.frmTinhLuong.resources

@@ -76,6 +76,12 @@
     <Compile Include="frmQuanLyDuAn.Designer.cs">
       <DependentUpon>frmQuanLyDuAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTinhLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhLuong.Designer.cs">
+      <DependentUpon>frmTinhLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyDuAn.resx">
       <DependentUpon>frmQuanLyDuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhLuong.resx">
+      <DependentUpon>frmTinhLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

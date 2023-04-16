@@ -49,6 +49,7 @@
     <Compile Include="BUS_ChamCongNV.cs" />
     <Compile Include="BUS_ChiTietChamCong.cs" />
     <Compile Include="BUS_QLDA.cs" />
+    <Compile Include="BUS_TinhLuong.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
