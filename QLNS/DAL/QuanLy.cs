@@ -382,7 +382,7 @@ namespace DAL
             return ListLuongNV;
         }
         public void ThongKeLuongNV() {
-        
+            
         }
     }
 }

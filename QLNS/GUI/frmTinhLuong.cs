@@ -21,6 +21,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        List<LuongNV> ListLuong;
         private void frmTinhLuong_Load(object sender, EventArgs e)
         {
             int month = DateTime.Now.Month;
@@ -30,15 +31,15 @@ namespace GUI
 
             int Thang = Convert.ToInt32(txtThang.Text);
             int Nam = Convert.ToInt32(txtNam.Text);
-
-            List<LuongNV> ListLuong = bus_TinhLuong.HienThi_Luong(Thang, Nam);
-            foreach(LuongNV item in ListLuong)
-            {
-                item.TongLuong = 0;
-            }
-
+            Load_List(Thang, Nam);
+        }
+        // Load list
+        private void Load_List(int Thang, int Nam)
+        {
+            ListLuong = bus_TinhLuong.HienThi_Luong(Thang, Nam);
             Load_DataLuong(ListLuong);
         }
+
         // Load Dữ liệu bảng lương
         private void Load_DataLuong(List<LuongNV> source)
         {
@@ -63,12 +64,16 @@ namespace GUI
             int Nam = Convert.ToInt32(txtNam.Text);
 
             var source = bus_TinhLuong.HienThi_Luong(Thang, Nam);
+            ListLuong = source;
+
             Load_DataLuong(source);
         }
         // Tạo báo cáo
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            frmThongKeLuong frmReport = new frmThongKeLuong(ListLuong);
+            frmReport.Show();
         }
         // Quay lại form Chi tiết chấm công
         private void btnBack_Click(object sender, EventArgs e)
@@ -77,6 +82,5 @@ namespace GUI
             frmChiTietChamCong frmCTCC = new frmChiTietChamCong();
             frmCTCC.Show();
         }
-
     }
 }
