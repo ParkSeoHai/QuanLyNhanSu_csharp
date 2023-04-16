@@ -15,9 +15,15 @@ namespace GUI
 {
     public partial class FormQuanLyNhanVien : Form
     {
+        private string maQL = "";
         public FormQuanLyNhanVien()
         {
             InitializeComponent();
+        }
+        public FormQuanLyNhanVien(string maQL)
+        {
+            InitializeComponent();
+            this.maQL = maQL;
         }
         DBConnect CONNECT = new DBConnect();
         public void HienThi()
@@ -46,7 +52,7 @@ namespace GUI
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            NhanVien nhanVien = new NhanVien("", txtTenNhanVien.Text, txtGioiTinh.Text, dateNgaySinh.Value.ToString("dd/MM/yyyy"), txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, txtChucVu.Text, txtViTriCongViec.Text, txtMaPhong.Text);
+            NhanVien nhanVien = new NhanVien("", txtTenNhanVien.Text, txtGioiTinh.Text, dateNgaySinh.Value.ToString("dd/MM/yyyy"), txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, txtChucVu.Text, txtViTriCongViec.Text, coboMaPB.Text);
             Quan_Ly_Nhan_Vien quanLy = new Quan_Ly_Nhan_Vien();
             if (quanLy.themNhanVien(nhanVien))
             {
@@ -60,7 +66,7 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            NhanVien nhanVien = new NhanVien($"{MaNV}", txtTenNhanVien.Text, txtGioiTinh.Text, dateNgaySinh.Value.ToString("dd/MM/yyyy"), txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, txtChucVu.Text, txtViTriCongViec.Text, txtMaPhong.Text);
+            NhanVien nhanVien = new NhanVien($"{MaNV}", txtTenNhanVien.Text, txtGioiTinh.Text, dateNgaySinh.Value.ToString("dd/MM/yyyy"), txtDiaChi.Text, txtSoDienThoai.Text, txtEmail.Text, txtChucVu.Text, txtViTriCongViec.Text, coboMaPB.Text);
             Quan_Ly_Nhan_Vien quanLy = new Quan_Ly_Nhan_Vien();
             if (quanLy.suaNhanVien(nhanVien))
             {
@@ -84,7 +90,7 @@ namespace GUI
             txtEmail.Text = item.SubItems[6].Text;
             txtChucVu.Text = item.SubItems[7].Text;
             txtViTriCongViec.Text = item.SubItems[8].Text;
-            txtMaPhong.Text = item.SubItems[9].Text;
+            coboMaPB.Text = item.SubItems[9].Text;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -127,15 +133,29 @@ namespace GUI
                 MessageBox.Show("Không Có Dữ Liệu Đó");
             }
         }
-
+        public void HienThiMaPhongBan()
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = CommandType.Text;
+            sqlCMD.CommandText = "select MaPB from PhongBan";
+            sqlCMD.Connection = CONNECT.chuoiKetNoi_Mot();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            while (reader.Read())
+            {
+                coboMaPB.Items.Add(reader.GetString(0));
+            }
+            reader.Close();
+        }
         private void FormQuanLyNhanVien_Load(object sender, EventArgs e)
         {
             HienThi();
+            HienThiMaPhongBan();
+            coboMaPB.SelectedIndex = 0;
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            FormTrang_Chu trangChu = new FormTrang_Chu();
+            FormTrang_Chu trangChu = new FormTrang_Chu(maQL);
             this.Hide();
             trangChu.ShowDialog();
         }

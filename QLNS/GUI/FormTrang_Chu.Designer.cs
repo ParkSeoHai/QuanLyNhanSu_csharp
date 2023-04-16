@@ -104,6 +104,7 @@
             this.btnThongKe.Size = new System.Drawing.Size(294, 67);
             this.btnThongKe.TabIndex = 4;
             this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnQuanLyLuong
             // 
@@ -125,6 +126,7 @@
             this.btnQuanLyLuong.Size = new System.Drawing.Size(294, 67);
             this.btnQuanLyLuong.TabIndex = 3;
             this.btnQuanLyLuong.Text = "Quản Lý Lương";
+            this.btnQuanLyLuong.Click += new System.EventHandler(this.btnQuanLyLuong_Click);
             // 
             // btnQuanLyDuAn
             // 
@@ -146,6 +148,7 @@
             this.btnQuanLyDuAn.Size = new System.Drawing.Size(294, 67);
             this.btnQuanLyDuAn.TabIndex = 2;
             this.btnQuanLyDuAn.Text = "Quản Lý Dự Án";
+            this.btnQuanLyDuAn.Click += new System.EventHandler(this.btnQuanLyDuAn_Click);
             // 
             // btnQuanLyNhanVien
             // 
@@ -228,6 +231,7 @@
             this.Name = "FormTrang_Chu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTrang_Chu";
+            this.Load += new System.EventHandler(this.FormTrang_Chu_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

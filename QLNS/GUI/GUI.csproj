@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -41,6 +45,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,11 +57,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsReportLuong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportLuong.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChamCongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamCongNV.Designer.cs">
+      <DependentUpon>frmChamCongNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChiTietChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietChamCong.Designer.cs">
+      <DependentUpon>frmChiTietChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLyNhanVien.cs">
       <SubType>Form</SubType>
@@ -94,10 +116,34 @@
     <Compile Include="frmQuanLyDuAn.Designer.cs">
       <DependentUpon>frmQuanLyDuAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKeLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeLuong.Designer.cs">
+      <DependentUpon>frmThongKeLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTinhLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhLuong.Designer.cs">
+      <DependentUpon>frmTinhLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptLuongNV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLuongNV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChamCongNV.resx">
+      <DependentUpon>frmChamCongNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietChamCong.resx">
+      <DependentUpon>frmChiTietChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyNhanVien.resx">
       <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
@@ -117,6 +163,12 @@
     <EmbeddedResource Include="frmQuanLyDuAn.resx">
       <DependentUpon>frmQuanLyDuAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeLuong.resx">
+      <DependentUpon>frmThongKeLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhLuong.resx">
+      <DependentUpon>frmTinhLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +178,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rptLuongNV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLuongNV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dsReportLuong.xsc">
+      <DependentUpon>dsReportLuong.xsd</DependentUpon>
+    </None>
+    <None Include="dsReportLuong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportLuong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsReportLuong.xss">
+      <DependentUpon>dsReportLuong.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +216,9 @@
       <Project>{00b5c8f5-f1f9-4c75-8eea-95352f806a0e}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

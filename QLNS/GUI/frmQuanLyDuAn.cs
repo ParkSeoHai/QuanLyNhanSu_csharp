@@ -15,14 +15,20 @@ namespace GUI
     public partial class frmQuanLyDuAn : Form
     {
         BUS_QLDA BUS_QLDA = new BUS_QLDA();
+        private string MaQL = "";
         public frmQuanLyDuAn()
         {
             InitializeComponent();
         }
-
+        public frmQuanLyDuAn(string maQL)
+        {
+            InitializeComponent();
+            MaQL = maQL;
+        }
         private void frmQuanLyDuAn_Load(object sender, EventArgs e)
         {
-            Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
+            cbBox_TimKiem.Text = cbBox_TimKiem.Items[0].ToString();
+            panel_TimKiem.Hide();
         }
 
         // Hàm load datagridview
@@ -30,17 +36,26 @@ namespace GUI
         {
             dtGridQLDA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtGridQLDA.DataSource = dt;
+            dtGridQLDA.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtGridQLDA.Columns[0].HeaderText = "Mã DA";
+            dtGridQLDA.Columns[1].HeaderText = "Tên DA";
+            dtGridQLDA.Columns[2].HeaderText = "Số NV";
+            dtGridQLDA.Columns[3].HeaderText = "Mô tả";
+            dtGridQLDA.Columns[4].HeaderText = "Mã PB";
         }
         // Sự kiện cell click
         int index;
         private void dtGridQLDA_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
-            txtMaDA.Text = dtGridQLDA.Rows[index].Cells[0].Value.ToString();
-            txtTenDA.Text = dtGridQLDA.Rows[index].Cells[1].Value.ToString();
-            txtSoNV.Text = dtGridQLDA.Rows[index].Cells[2].Value.ToString();
-            txtMoTaDA.Text = dtGridQLDA.Rows[index].Cells[3].Value.ToString();
-            txtMaPB.Text = dtGridQLDA.Rows[index].Cells[4].Value.ToString();
+            if(index >= 0)
+            {
+                txtMaDA.Text = dtGridQLDA.Rows[index].Cells[0].Value.ToString();
+                txtTenDA.Text = dtGridQLDA.Rows[index].Cells[1].Value.ToString();
+                txtSoNV.Text = dtGridQLDA.Rows[index].Cells[2].Value.ToString();
+                txtMoTaDA.Text = dtGridQLDA.Rows[index].Cells[3].Value.ToString();
+                txtMaPB.Text = dtGridQLDA.Rows[index].Cells[4].Value.ToString();
+            }
         }
 
         // Hàm check textbox
@@ -102,23 +117,118 @@ namespace GUI
             if(Check_TextBox())
             {
                 DuAn DA = Create_DuAn();
-
+                if(BUS_QLDA.ThemDA(DA))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
+                    Clear_TextBox();
+                } else
+                {
+                    MessageBox.Show("Thêm không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         // Sửa
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(result == DialogResult.OK)
+            {
+                if (Check_TextBox())
+                {
+                    DuAn DA = Create_DuAn();
+                    if (BUS_QLDA.SuaDA(DA))
+                    {
+                        MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
+                        Clear_TextBox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
         // Xóa
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(result == DialogResult.OK)
+            {
+                if (Check_TextBox())
+                {
+                    DuAn DA = Create_DuAn();
+                    if (BUS_QLDA.XoaDA(DA))
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
+                        Clear_TextBox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+        int i = 0;
+        // Tìm kiếm
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            panel_TimKiem.Show();
+            dtGridQLDA.DataSource = null;
+            if(i >= 1)
+            {
+                if(string.IsNullOrWhiteSpace(txtTimKiem.Text))
+                {
+                    MessageBox.Show("Chưa nhập thông tin cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtTimKiem.Focus();
+                } else
+                {
+                    if (cbBox_TimKiem.Text == "Tìm kiếm theo Mã DA")
+                    {
+                        DataTable dt = BUS_QLDA.TimKiemDA_Ma(txtTimKiem.Text);
+                        Load_dtGridQLDA(dt);
+                        MessageBox.Show($"Tìm thấy {dt.Rows.Count} kết quả");
+                    }
+                    else if (cbBox_TimKiem.Text == "Tìm kiếm theo Tên DA")
+                    {
+                        DataTable dt = BUS_QLDA.TimKiemDA_Ten(txtTimKiem.Text);
+                        Load_dtGridQLDA(dt);
+                        MessageBox.Show($"Tìm thấy {dt.Rows.Count} kết quả");
+                    }
+                }
+            }
+            i++;
+        }
+        // Sự kiện thoát panel tìm kiếm
+        private void btnThoat_TimKiem_Click(object sender, EventArgs e)
+        {
+            panel_TimKiem.Hide();
+            i = 0;
+        }
+        // Hiển thị
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
         }
 
         private void dtGridQLDA_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            FormTrang_Chu trangChu = new FormTrang_Chu(MaQL);
+            this.Hide();
+            trangChu.ShowDialog();
         }
     }
 }

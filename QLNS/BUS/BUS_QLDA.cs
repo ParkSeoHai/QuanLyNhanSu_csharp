@@ -32,5 +32,13 @@ namespace BUS
             if (quanLy.XoaDuAn(DA)) { return true; }
             return false;
         }
+        public DataTable TimKiemDA_Ma(string txtMaDA)
+        {
+            return quanLy.TimKiemDA_Ma(txtMaDA);
+        }
+        public DataTable TimKiemDA_Ten(string txtTenDA)
+        {
+            return quanLy.TimKiemDA_Ten(txtTenDA);
+        }
     }
 }

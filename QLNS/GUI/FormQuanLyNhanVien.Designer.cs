@@ -30,6 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyNhanVien));
             this.lsvHienThi = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTenNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,8 +54,8 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtChucVu = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtViTriCongViec = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMaPhong = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.dateNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -55,18 +65,8 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dateNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.coboMaPB = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupBox1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -97,6 +97,65 @@
             this.lsvHienThi.UseCompatibleStateImageBehavior = false;
             this.lsvHienThi.View = System.Windows.Forms.View.Details;
             this.lsvHienThi.SelectedIndexChanged += new System.EventHandler(this.lsvHienThi_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã NV";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Họ Tên";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 250;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giới Tính";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ngày Sinh";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Địa Chỉ";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 300;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "SĐT";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 120;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Email";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 150;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Chức Vụ";
+            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader12.Width = 150;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Vị Trí Công Việc";
+            this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader13.Width = 150;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Mã PB";
+            this.columnHeader14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader14.Width = 120;
             // 
             // groupBox1
             // 
@@ -377,32 +436,11 @@
             this.txtViTriCongViec.Size = new System.Drawing.Size(262, 34);
             this.txtViTriCongViec.TabIndex = 30;
             // 
-            // txtMaPhong
-            // 
-            this.txtMaPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaPhong.DefaultText = "";
-            this.txtMaPhong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaPhong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaPhong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaPhong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaPhong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaPhong.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPhong.ForeColor = System.Drawing.Color.Black;
-            this.txtMaPhong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaPhong.Location = new System.Drawing.Point(712, 170);
-            this.txtMaPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.PasswordChar = '\0';
-            this.txtMaPhong.PlaceholderText = "txtMaPhong";
-            this.txtMaPhong.SelectedText = "";
-            this.txtMaPhong.Size = new System.Drawing.Size(262, 34);
-            this.txtMaPhong.TabIndex = 33;
-            // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BackColor = System.Drawing.Color.White;
+            this.guna2GroupBox1.Controls.Add(this.coboMaPB);
             this.guna2GroupBox1.Controls.Add(this.dateNgaySinh);
-            this.guna2GroupBox1.Controls.Add(this.txtMaPhong);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel7);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel8);
             this.guna2GroupBox1.Controls.Add(this.txtViTriCongViec);
@@ -433,6 +471,20 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(1058, 275);
             this.guna2GroupBox1.TabIndex = 12;
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dateNgaySinh
+            // 
+            this.dateNgaySinh.Checked = true;
+            this.dateNgaySinh.FillColor = System.Drawing.Color.White;
+            this.dateNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateNgaySinh.Location = new System.Drawing.Point(224, 158);
+            this.dateNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateNgaySinh.Name = "dateNgaySinh";
+            this.dateNgaySinh.Size = new System.Drawing.Size(262, 36);
+            this.dateNgaySinh.TabIndex = 34;
+            this.dateNgaySinh.Value = new System.DateTime(2023, 4, 16, 14, 16, 4, 355);
             // 
             // guna2HtmlLabel7
             // 
@@ -524,79 +576,6 @@
             this.txt.TabIndex = 2;
             this.txt.Text = "Tên NV:";
             // 
-            // dateNgaySinh
-            // 
-            this.dateNgaySinh.Checked = true;
-            this.dateNgaySinh.FillColor = System.Drawing.Color.White;
-            this.dateNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateNgaySinh.Location = new System.Drawing.Point(224, 158);
-            this.dateNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Size = new System.Drawing.Size(262, 36);
-            this.dateNgaySinh.TabIndex = 34;
-            this.dateNgaySinh.Value = new System.DateTime(2023, 4, 16, 14, 16, 4, 355);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã NV";
-            this.columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Họ Tên";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 250;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Giới Tính";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 120;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Ngày Sinh";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 150;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Địa Chỉ";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 300;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "SĐT";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 120;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Email";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 150;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Chức Vụ";
-            this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader12.Width = 150;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Vị Trí Công Việc";
-            this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader13.Width = 150;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Mã PB";
-            this.columnHeader14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader14.Width = 120;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
@@ -608,6 +587,21 @@
             this.guna2PictureBox1.TabIndex = 14;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
+            // coboMaPB
+            // 
+            this.coboMaPB.BackColor = System.Drawing.Color.Transparent;
+            this.coboMaPB.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.coboMaPB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.coboMaPB.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.coboMaPB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.coboMaPB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.coboMaPB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.coboMaPB.ItemHeight = 30;
+            this.coboMaPB.Location = new System.Drawing.Point(712, 168);
+            this.coboMaPB.Name = "coboMaPB";
+            this.coboMaPB.Size = new System.Drawing.Size(262, 36);
+            this.coboMaPB.TabIndex = 35;
             // 
             // FormQuanLyNhanVien
             // 
@@ -648,7 +642,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtChucVu;
         private Guna.UI2.WinForms.Guna2TextBox txtViTriCongViec;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaPhong;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
@@ -671,5 +664,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox coboMaPB;
     }
 }

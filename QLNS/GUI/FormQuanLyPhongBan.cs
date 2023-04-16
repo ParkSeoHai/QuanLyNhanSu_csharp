@@ -15,13 +15,20 @@ namespace GUI
 {
     public partial class FormQuanLyPhongBan : Form
     {
+        private string maQl = "";
         public FormQuanLyPhongBan()
         {
             InitializeComponent();
         }
+        public FormQuanLyPhongBan(string maQl)
+        {
+            InitializeComponent();
+            this.maQl = maQl;
+        }
         DBConnect connect = new DBConnect();
         public void hienThi()
         {
+            txtMaQuanLy.Text = maQl;
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = CommandType.Text;
             sqlCMD.CommandText = "select * from PhongBan";
@@ -55,7 +62,7 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            PhongBan phongBan = new PhongBan("", txtTenPhongBan.Text, dateNgayLap.Value.ToString("dd/MM/yyyy"), txtSoDienThoai.Text, txtMaQuanLy.Text);
+            PhongBan phongBan = new PhongBan("", txtTenPhongBan.Text, dateNgayLap.Value.ToString("dd/MM/yyyy"), txtSoDienThoai.Text, maQl);
             QuanLyPhongBan quanLy = new QuanLyPhongBan();
             if (quanLy.themPhongBan(phongBan))
             {
@@ -119,9 +126,14 @@ namespace GUI
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            FormTrang_Chu trangChu = new FormTrang_Chu();
+            FormTrang_Chu trangChu = new FormTrang_Chu(maQl);
             this.Hide();
             trangChu.ShowDialog();
+        }
+
+        private void txtMaQuanLy_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

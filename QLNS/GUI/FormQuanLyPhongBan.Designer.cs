@@ -49,10 +49,10 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.txtMaQuanLy = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtMaQuanLy = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pickClose)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -347,37 +347,6 @@
             this.dateNgayLap.Size = new System.Drawing.Size(444, 39);
             this.dateNgayLap.TabIndex = 20;
             // 
-            // txtMaQuanLy
-            // 
-            this.txtMaQuanLy.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaQuanLy.DefaultText = "";
-            this.txtMaQuanLy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaQuanLy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaQuanLy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaQuanLy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaQuanLy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaQuanLy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaQuanLy.ForeColor = System.Drawing.Color.Black;
-            this.txtMaQuanLy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaQuanLy.Location = new System.Drawing.Point(235, 114);
-            this.txtMaQuanLy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtMaQuanLy.Name = "txtMaQuanLy";
-            this.txtMaQuanLy.PasswordChar = '\0';
-            this.txtMaQuanLy.PlaceholderText = "Nhập Mã Quản Lý";
-            this.txtMaQuanLy.SelectedText = "";
-            this.txtMaQuanLy.Size = new System.Drawing.Size(262, 34);
-            this.txtMaQuanLy.TabIndex = 19;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(38, 114);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(146, 34);
-            this.guna2HtmlLabel4.TabIndex = 18;
-            this.guna2HtmlLabel4.Text = "Mã Quản Lý:";
-            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.AutoSize = false;
@@ -402,6 +371,39 @@
             this.guna2PictureBox1.TabIndex = 21;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(38, 114);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(146, 34);
+            this.guna2HtmlLabel4.TabIndex = 18;
+            this.guna2HtmlLabel4.Text = "Mã Quản Lý:";
+            // 
+            // txtMaQuanLy
+            // 
+            this.txtMaQuanLy.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaQuanLy.DefaultText = "";
+            this.txtMaQuanLy.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMaQuanLy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMaQuanLy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaQuanLy.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMaQuanLy.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaQuanLy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaQuanLy.ForeColor = System.Drawing.Color.Black;
+            this.txtMaQuanLy.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMaQuanLy.Location = new System.Drawing.Point(235, 114);
+            this.txtMaQuanLy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMaQuanLy.Name = "txtMaQuanLy";
+            this.txtMaQuanLy.PasswordChar = '\0';
+            this.txtMaQuanLy.PlaceholderText = "";
+            this.txtMaQuanLy.ReadOnly = true;
+            this.txtMaQuanLy.SelectedText = "";
+            this.txtMaQuanLy.Size = new System.Drawing.Size(262, 34);
+            this.txtMaQuanLy.TabIndex = 19;
+            this.txtMaQuanLy.TextChanged += new System.EventHandler(this.txtMaQuanLy_TextChanged);
             // 
             // FormQuanLyPhongBan
             // 
@@ -443,8 +445,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaQuanLy;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -452,5 +452,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.DateTimePicker dateNgayLap;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaQuanLy;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

@@ -110,7 +110,7 @@
             this.txtMatKhau.Location = new System.Drawing.Point(183, 287);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '\0';
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.PlaceholderText = "Nhập Vào Mật Khẩu.";
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.Size = new System.Drawing.Size(415, 45);

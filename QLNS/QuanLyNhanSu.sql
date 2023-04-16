@@ -40,11 +40,14 @@ CREATE TABLE DuAn (
 	MaPB VARCHAR(15) FOREIGN KEY REFERENCES PhongBan(MaPB)
 )
 
-CREATE TABLE ChamCong (
-	MaNV VARCHAR(15) NOT NULL FOREIGN KEY REFERENCES NhanVien(MaNV),
-	MaDA VARCHAR(15) NOT NULL FOREIGN KEY REFERENCES DuAn(MaDA),
-	SoNgayLam FLOAT,
-	PRIMARY KEY (MaNV, MaDA)
+CREATE TABLE ChamCong (	
+	MaCC INT IDENTITY(1, 1) PRIMARY KEY,
+	NgayLam INT,
+	ThangLam INT,
+	NamLam INT,
+	TrangThai NVARCHAR(50),
+	GhiChu NVARCHAR(50),
+	MaNV VARCHAR(15) NOT NULL FOREIGN KEY REFERENCES NhanVien(MaNV)
 )
 
 CREATE TABLE TaiKhoanDangNhap (
@@ -52,9 +55,9 @@ CREATE TABLE TaiKhoanDangNhap (
 	MatKhau NVARCHAR(50),
 	MaQL VARCHAR(15) FOREIGN KEY REFERENCES QuanLy(MaQL)
 )
+--Cái này phải chạy, để lấy tài khoản đăng nhập.
+insert into TaiKhoanDangNhap values ('admin', '123', 'QL001')
 select * from QuanLy
-select * from TaiKhoanDangNhap
-insert into QuanLy values ('QL0001', N'Nguyễn Xuân Mạnh', N'Nam', '29/09/2003', N'Khánh Thượng Ba Vì Hà Nội', '0352593469', '20210794@eaut.edu.vn')
-insert into TaiKhoanDangNhap values ('XuanManh', '123', 'QL0001')
-select TenTK, MatKhau from TaiKhoanDangNhap
-select * from NhanVien
+select MaPB from PhongBan
+insert into QuanLy values ('QL001', N'Bùi Mộc Quế Anh', N'Nữ', '27/7/2003', N'Hòa Bình', '0352593469', '123@gmail.com')
+select MaQL from TaiKhoanDangNhap where TenTK = 'admin'
