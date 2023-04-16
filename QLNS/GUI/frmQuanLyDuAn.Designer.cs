@@ -35,6 +35,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtMaPB = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,16 +58,16 @@
             this.btnThoat_TimKiem = new System.Windows.Forms.PictureBox();
             this.cbBox_TimKiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtGridQLDA = new System.Windows.Forms.DataGridView();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.hienthi = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.panel_TimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnThoat_TimKiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridQLDA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -80,7 +81,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1067, 53);
             this.guna2Panel1.TabIndex = 0;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2ControlBox3
             // 
@@ -151,8 +151,21 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1067, 93);
             this.guna2GradientPanel1.TabIndex = 1;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(62, 59);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 23;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.hienthi);
             this.guna2Panel2.Controls.Add(this.txtMaPB);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel6);
             this.guna2Panel2.Controls.Add(this.txtMoTaDA);
@@ -231,7 +244,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(27, 241);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(19, 241);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(100, 27);
             this.guna2HtmlLabel5.TabIndex = 6;
@@ -251,7 +264,7 @@
             this.txtSoNV.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoNV.ForeColor = System.Drawing.Color.Black;
             this.txtSoNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoNV.Location = new System.Drawing.Point(138, 187);
+            this.txtSoNV.Location = new System.Drawing.Point(135, 165);
             this.txtSoNV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtSoNV.Name = "txtSoNV";
             this.txtSoNV.PasswordChar = '\0';
@@ -265,7 +278,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(30, 198);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(24, 176);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(73, 27);
             this.guna2HtmlLabel4.TabIndex = 4;
@@ -299,7 +312,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(30, 132);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(19, 110);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(84, 27);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -319,7 +332,7 @@
             this.txtMaDA.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDA.ForeColor = System.Drawing.Color.Black;
             this.txtMaDA.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaDA.Location = new System.Drawing.Point(138, 47);
+            this.txtMaDA.Location = new System.Drawing.Point(135, 36);
             this.txtMaDA.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtMaDA.Name = "txtMaDA";
             this.txtMaDA.PasswordChar = '\0';
@@ -333,7 +346,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(30, 58);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(24, 47);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 27);
             this.guna2HtmlLabel2.TabIndex = 0;
@@ -545,19 +558,32 @@
             this.dtGridQLDA.Size = new System.Drawing.Size(701, 343);
             this.dtGridQLDA.TabIndex = 0;
             this.dtGridQLDA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridQLDA_CellClick);
-            this.dtGridQLDA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridQLDA_CellContentClick);
             // 
-            // guna2PictureBox1
+            // hienthi
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 90);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 23;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.hienthi.BackColor = System.Drawing.Color.Transparent;
+            this.hienthi.BorderRadius = 12;
+            this.hienthi.BorderThickness = 1;
+            this.hienthi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hienthi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.hienthi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.hienthi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.hienthi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.hienthi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.hienthi.FillColor = System.Drawing.Color.White;
+            this.hienthi.FillColor2 = System.Drawing.Color.White;
+            this.hienthi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hienthi.ForeColor = System.Drawing.Color.Black;
+            this.hienthi.HoverState.BorderColor = System.Drawing.Color.White;
+            this.hienthi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
+            this.hienthi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
+            this.hienthi.HoverState.ForeColor = System.Drawing.Color.White;
+            this.hienthi.Location = new System.Drawing.Point(200, 349);
+            this.hienthi.Name = "hienthi";
+            this.hienthi.Size = new System.Drawing.Size(144, 55);
+            this.hienthi.TabIndex = 4;
+            this.hienthi.Text = "Hiển thị";
+            this.hienthi.Click += new System.EventHandler(this.hienthi_Click);
             // 
             // frmQuanLyDuAn
             // 
@@ -579,6 +605,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
@@ -586,7 +613,6 @@
             this.panel_TimKiem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnThoat_TimKiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridQLDA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,5 +649,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Guna.UI2.WinForms.Guna2GradientButton btnHienThi;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton hienthi;
     }
 }

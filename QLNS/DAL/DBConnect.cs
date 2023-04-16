@@ -10,13 +10,13 @@ namespace DAL
     {
         public SqlConnection ChuoiKetNoi_Hai()
         {
-            string connString = @"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
+            string connString = @"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
         public SqlConnection chuoiKetNoi_Mot()
         {
-            string strCon = @"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
+            string strCon = @"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
             SqlConnection sqlCon = new SqlConnection(strCon);
             sqlCon.Open();
             return sqlCon;
