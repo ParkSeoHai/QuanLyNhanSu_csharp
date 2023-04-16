@@ -18,3 +18,13 @@ D:\Workspace\C#\BTL_NET(QLNS)\QLNS\DAL\obj\Debug\DAL.csproj.GenerateResource.cac
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\DAL\obj\Debug\DAL.exe
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\DAL\obj\Debug\DAL.pdb
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\bin\Debug\DAL.exe.config
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\bin\Debug\DAL.exe
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\bin\Debug\DAL.pdb
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.csproj.SuggestedBindingRedirects.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.Properties.Resources.resources
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.exe
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\DAL\obj\Debug\DAL.pdb

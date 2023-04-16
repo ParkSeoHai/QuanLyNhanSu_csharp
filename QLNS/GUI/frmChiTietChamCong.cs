@@ -16,9 +16,15 @@ namespace GUI
     public partial class frmChiTietChamCong : Form
     {
         BUS_ChiTietChamCong BUS_CTCC = new BUS_ChiTietChamCong();
+        private string maQL = "";
         public frmChiTietChamCong()
         {
             InitializeComponent();
+        }
+        public frmChiTietChamCong(string maQL)
+        {
+            InitializeComponent();
+            this.maQL = maQL;
         }
         // Hàm load dataGrid
         private void Load_DataGrid(DataTable dt)
@@ -76,7 +82,7 @@ namespace GUI
         private void btnBack_Click(object sender, EventArgs e)
         {
             Hide();
-            frmChamCongNV frmCC = new frmChamCongNV();
+            frmChamCongNV frmCC = new frmChamCongNV(maQL);
             frmCC.Show();
         }
         // Sự kiện hiển thị dữ liệu
@@ -206,6 +212,11 @@ namespace GUI
             {
                 MessageBox.Show("Không có kết quả để hiển thị");
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -8,12 +8,12 @@ namespace DAL
 {
     public class Person
     {
-        protected string HoTen { get; set; }
-        protected string GioiTinh { get; set; }
-        protected string NgaySinh { get; set; }
-        protected string DiaChi { get; set; }
-        protected string SDT { get; set; }
-        protected string Email { get; set; }
+        public string HoTen { get; set; }
+        public string GioiTinh { get; set; }
+        public string NgaySinh { get; set; }
+        public string DiaChi { get; set; }
+        public string SDT { get; set; }
+        public string Email { get; set; }
 
         public Person(string HoTen, string GioiTinh, string NgaySinh, string DiaChi, string SDT, string Email)
         {

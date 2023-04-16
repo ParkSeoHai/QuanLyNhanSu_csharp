@@ -16,7 +16,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChamCongNV());
+            Application.Run(new Form_Dang_Nhap());
         }
     }
 }
