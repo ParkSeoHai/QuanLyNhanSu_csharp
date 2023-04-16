@@ -16,11 +16,16 @@ namespace GUI
     public partial class frmTinhLuong : Form
     {
         BUS_TinhLuong bus_TinhLuong = new BUS_TinhLuong();
+        private string maQL = "";
         public frmTinhLuong()
         {
             InitializeComponent();
         }
-
+        public frmTinhLuong(string maQL)
+        {
+            this.maQL = maQL;
+            InitializeComponent();
+        }
         List<LuongNV> ListLuong;
         private void frmTinhLuong_Load(object sender, EventArgs e)
         {
@@ -79,8 +84,13 @@ namespace GUI
         private void btnBack_Click(object sender, EventArgs e)
         {
             Hide();
-            frmChiTietChamCong frmCTCC = new frmChiTietChamCong();
+            frmChiTietChamCong frmCTCC = new frmChiTietChamCong(maQL);
             frmCTCC.Show();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

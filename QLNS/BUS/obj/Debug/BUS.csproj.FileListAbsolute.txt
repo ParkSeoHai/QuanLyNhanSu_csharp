@@ -26,3 +26,17 @@ D:\Workspace\C#\BTL_NET(QLNS)\QLNS\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.ca
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\BUS\obj\Debug\BUS.exe
 D:\Workspace\C#\BTL_NET(QLNS)\QLNS\BUS\obj\Debug\BUS.pdb
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\bin\Debug\BUS.exe.config
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\bin\Debug\BUS.exe
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\bin\Debug\BUS.pdb
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\bin\Debug\DAL.exe
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\bin\Debug\DAL.pdb
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\bin\Debug\DAL.exe.config
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.csproj.SuggestedBindingRedirects.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.exe
+D:\QLNS\QuanLyNhanSuLT_.Net-\QLNS\BUS\obj\Debug\BUS.pdb

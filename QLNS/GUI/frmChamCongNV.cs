@@ -16,9 +16,15 @@ namespace GUI
     public partial class frmChamCongNV : Form
     {
         BUS_ChamCongNV bus_ChamCong = new BUS_ChamCongNV();
+        private string maQL = "";
         public frmChamCongNV()
         {
             InitializeComponent();
+        }
+        public frmChamCongNV(string maQL)
+        {
+            InitializeComponent();
+            this.maQL = maQL;
         }
         // Sự kiện Load form
         private void frmChamCongNV_Load(object sender, EventArgs e)
@@ -164,8 +170,20 @@ namespace GUI
         private void btnCCTC_Click(object sender, EventArgs e)
         {
             Hide();
-            frmChiTietChamCong frmCTCC = new frmChiTietChamCong();
+            frmChiTietChamCong frmCTCC = new frmChiTietChamCong(maQL);
             frmCTCC.Show();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            FormTrang_Chu trangChu = new FormTrang_Chu(maQL);
+            this.Hide();
+            trangChu.ShowDialog();
         }
     } 
 }

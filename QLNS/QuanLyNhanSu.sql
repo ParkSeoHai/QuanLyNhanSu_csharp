@@ -49,3 +49,15 @@ CREATE TABLE ChamCong (
 	GhiChu NVARCHAR(50),
 	MaNV VARCHAR(15) NOT NULL FOREIGN KEY REFERENCES NhanVien(MaNV)
 )
+
+CREATE TABLE TaiKhoanDangNhap (
+	TenTK NVARCHAR(50) NOT NULL PRIMARY KEY,
+	MatKhau NVARCHAR(50),
+	MaQL VARCHAR(15) FOREIGN KEY REFERENCES QuanLy(MaQL)
+)
+--Cái này phải chạy, để lấy tài khoản đăng nhập.
+insert into TaiKhoanDangNhap values ('admin', '123', 'QL001')
+select * from QuanLy
+select MaPB from PhongBan
+insert into QuanLy values ('QL001', N'Bùi Mộc Quế Anh', N'Nữ', '27/7/2003', N'Hòa Bình', '0352593469', '123@gmail.com')
+select MaQL from TaiKhoanDangNhap where TenTK = 'admin'

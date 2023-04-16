@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -37,6 +37,7 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtThang = new System.Windows.Forms.ComboBox();
             this.btnTinhLuong = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnReport = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtNam = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtGridLuong = new System.Windows.Forms.DataGridView();
-            this.txtThang = new System.Windows.Forms.ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -64,6 +64,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1067, 48);
             this.guna2Panel1.TabIndex = 3;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2ControlBox3
             // 
@@ -153,6 +154,28 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1067, 71);
             this.guna2Panel2.TabIndex = 5;
             // 
+            // txtThang
+            // 
+            this.txtThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtThang.FormattingEnabled = true;
+            this.txtThang.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.txtThang.Location = new System.Drawing.Point(261, 26);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Size = new System.Drawing.Size(129, 33);
+            this.txtThang.TabIndex = 28;
+            // 
             // btnTinhLuong
             // 
             this.btnTinhLuong.BackColor = System.Drawing.Color.Transparent;
@@ -200,7 +223,7 @@
             this.btnReport.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnReport.Location = new System.Drawing.Point(833, 10);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(146, 48);
+            this.btnReport.Size = new System.Drawing.Size(140, 48);
             this.btnReport.TabIndex = 25;
             this.btnReport.Text = "Tạo báo cáo";
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -270,52 +293,30 @@
             // dtGridLuong
             // 
             this.dtGridLuong.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGridLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGridLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGridLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtGridLuong.Location = new System.Drawing.Point(0, 0);
             this.dtGridLuong.Name = "dtGridLuong";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtGridLuong.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGridLuong.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGridLuong.RowHeadersWidth = 62;
             this.dtGridLuong.RowTemplate.Height = 28;
             this.dtGridLuong.Size = new System.Drawing.Size(1067, 355);
             this.dtGridLuong.TabIndex = 0;
-            // 
-            // txtThang
-            // 
-            this.txtThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtThang.FormattingEnabled = true;
-            this.txtThang.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.txtThang.Location = new System.Drawing.Point(261, 26);
-            this.txtThang.Name = "txtThang";
-            this.txtThang.Size = new System.Drawing.Size(129, 33);
-            this.txtThang.TabIndex = 28;
             // 
             // frmTinhLuong
             // 

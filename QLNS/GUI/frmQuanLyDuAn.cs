@@ -15,11 +15,16 @@ namespace GUI
     public partial class frmQuanLyDuAn : Form
     {
         BUS_QLDA BUS_QLDA = new BUS_QLDA();
+        private string MaQL = "";
         public frmQuanLyDuAn()
         {
             InitializeComponent();
         }
-
+        public frmQuanLyDuAn(string maQL)
+        {
+            InitializeComponent();
+            MaQL = maQL;
+        }
         private void frmQuanLyDuAn_Load(object sender, EventArgs e)
         {
             cbBox_TimKiem.Text = cbBox_TimKiem.Items[0].ToString();
@@ -207,6 +212,23 @@ namespace GUI
         private void btnHienThi_Click(object sender, EventArgs e)
         {
             Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
+        }
+
+        private void dtGridQLDA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            FormTrang_Chu trangChu = new FormTrang_Chu(MaQL);
+            this.Hide();
+            trangChu.ShowDialog();
         }
     }
 }
