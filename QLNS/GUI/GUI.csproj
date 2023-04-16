@@ -58,6 +58,36 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyNhanVien.Designer.cs">
+      <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLyPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLyPhongBan.Designer.cs">
+      <DependentUpon>FormQuanLyPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuenMatKhau.Designer.cs">
+      <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrang_Chu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrang_Chu.Designer.cs">
+      <DependentUpon>FormTrang_Chu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Dang_Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Dang_Nhap.Designer.cs">
+      <DependentUpon>Form_Dang_Nhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyDuAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +98,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyNhanVien.resx">
+      <DependentUpon>FormQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyPhongBan.resx">
+      <DependentUpon>FormQuanLyPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuenMatKhau.resx">
+      <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrang_Chu.resx">
+      <DependentUpon>FormTrang_Chu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Dang_Nhap.resx">
+      <DependentUpon>Form_Dang_Nhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyDuAn.resx">
       <DependentUpon>frmQuanLyDuAn.cs</DependentUpon>

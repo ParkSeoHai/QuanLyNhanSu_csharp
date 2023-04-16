@@ -4,7 +4,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DAL
 {
     public class DBConnect
@@ -15,5 +14,13 @@ namespace DAL
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
+        public SqlConnection chuoiKetNoi_Mot()
+        {
+            string strCon = "Data Source=DESKTOP-LNJ99RH\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
+            SqlConnection sqlCon = new SqlConnection(strCon);
+            sqlCon.Open();
+            return sqlCon;
+        }
+        
     }
 }

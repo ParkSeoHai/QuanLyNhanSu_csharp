@@ -1,4 +1,4 @@
-CREATE DATABASE QuanLyNhanSu
+﻿CREATE DATABASE QuanLyNhanSu
 USE QuanLyNhanSu
 
 CREATE TABLE QuanLy (
@@ -52,3 +52,9 @@ CREATE TABLE TaiKhoanDangNhap (
 	MatKhau NVARCHAR(50),
 	MaQL VARCHAR(15) FOREIGN KEY REFERENCES QuanLy(MaQL)
 )
+select * from QuanLy
+select * from TaiKhoanDangNhap
+insert into QuanLy values ('QL0001', N'Nguyễn Xuân Mạnh', N'Nam', '29/09/2003', N'Khánh Thượng Ba Vì Hà Nội', '0352593469', '20210794@eaut.edu.vn')
+insert into TaiKhoanDangNhap values ('XuanManh', '123', 'QL0001')
+select TenTK, MatKhau from TaiKhoanDangNhap
+select * from NhanVien

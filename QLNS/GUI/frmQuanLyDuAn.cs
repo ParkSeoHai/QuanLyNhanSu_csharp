@@ -115,5 +115,10 @@ namespace GUI
         {
 
         }
+
+        private void dtGridQLDA_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
