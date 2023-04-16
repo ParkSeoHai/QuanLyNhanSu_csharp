@@ -71,7 +71,7 @@
             this.txtHienThiLaiMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHienThiLaiMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txtHienThiLaiMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtHienThiLaiMatKhau.Location = new System.Drawing.Point(245, 287);
+            this.txtHienThiLaiMatKhau.Location = new System.Drawing.Point(245, 244);
             this.txtHienThiLaiMatKhau.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtHienThiLaiMatKhau.Name = "txtHienThiLaiMatKhau";
             this.txtHienThiLaiMatKhau.PasswordChar = '\0';
@@ -94,7 +94,7 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
             this.guna2Button1.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(22, 410);
+            this.guna2Button1.Location = new System.Drawing.Point(22, 381);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.White;
             this.guna2Button1.Size = new System.Drawing.Size(590, 64);
@@ -128,7 +128,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(22, 297);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(22, 272);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(141, 22);
             this.guna2HtmlLabel1.TabIndex = 2;

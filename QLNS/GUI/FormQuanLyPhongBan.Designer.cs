@@ -403,7 +403,6 @@
             this.txtMaQuanLy.SelectedText = "";
             this.txtMaQuanLy.Size = new System.Drawing.Size(262, 34);
             this.txtMaQuanLy.TabIndex = 19;
-            this.txtMaQuanLy.TextChanged += new System.EventHandler(this.txtMaQuanLy_TextChanged);
             // 
             // FormQuanLyPhongBan
             // 

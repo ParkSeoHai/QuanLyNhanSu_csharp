@@ -130,10 +130,5 @@ namespace GUI
             this.Hide();
             trangChu.ShowDialog();
         }
-
-        private void txtMaQuanLy_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

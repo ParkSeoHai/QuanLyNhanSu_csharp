@@ -29,6 +29,12 @@ namespace GUI
         {
             cbBox_TimKiem.Text = cbBox_TimKiem.Items[0].ToString();
             panel_TimKiem.Hide();
+            List<string> listMaPB = BUS_QLDA.Get_MaPB();
+            foreach(var maPB in listMaPB)
+            {
+                txtMaPB.Items.Add(maPB);
+            }
+            txtMaPB.SelectedIndex = 0;
             Load_dtGridQLDA(BUS_QLDA.HienThiDuLieu());
         }
 
@@ -103,7 +109,7 @@ namespace GUI
             txtTenDA.Clear();
             txtSoNV.Clear();
             txtMoTaDA.Clear();
-            txtMaPB.Clear();
+            txtMaPB.SelectedIndex = 0;
         }
         // Hàm tạo đối tượng DuAn
         private DuAn Create_DuAn()

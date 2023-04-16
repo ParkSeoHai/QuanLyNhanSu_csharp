@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,11 @@ namespace BUS
         public DataTable TimKiemDA_Ten(string txtTenDA)
         {
             return quanLy.TimKiemDA_Ten(txtTenDA);
+        }
+        // Lấy dữ liệu phòng ban
+        public List<string> Get_MaPB()
+        {
+            return quanLy.Get_MaPB();
         }
     }
 }

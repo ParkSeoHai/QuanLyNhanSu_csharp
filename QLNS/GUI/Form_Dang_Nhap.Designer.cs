@@ -65,7 +65,7 @@
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.White;
             this.linkLabel1.BackColor = System.Drawing.Color.White;
             this.linkLabel1.DisabledLinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(389, 463);
+            this.linkLabel1.Location = new System.Drawing.Point(375, 457);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(223, 43);
             this.linkLabel1.TabIndex = 6;
@@ -87,7 +87,7 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
             this.guna2Button1.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(33, 396);
+            this.guna2Button1.Location = new System.Drawing.Point(33, 375);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.White;
             this.guna2Button1.Size = new System.Drawing.Size(565, 64);
@@ -107,7 +107,7 @@
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.ForeColor = System.Drawing.Color.Black;
             this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMatKhau.Location = new System.Drawing.Point(183, 287);
+            this.txtMatKhau.Location = new System.Drawing.Point(183, 247);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
@@ -141,7 +141,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(33, 292);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(36, 270);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(75, 22);
             this.guna2HtmlLabel1.TabIndex = 2;

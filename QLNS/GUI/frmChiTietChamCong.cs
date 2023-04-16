@@ -213,10 +213,5 @@ namespace GUI
                 MessageBox.Show("Không có kết quả để hiển thị");
             }
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

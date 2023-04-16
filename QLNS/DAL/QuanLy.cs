@@ -13,7 +13,6 @@ namespace DAL
 {
     interface IQuanLy
     {
-        // Dự án
         bool DangNhap(string tk, string mk);
         string quenMatKhau(string s);
         bool ThemNhanVien(NhanVien nhanVien);
@@ -24,6 +23,8 @@ namespace DAL
         bool SuaPhongBan(PhongBan phongBan);
         bool XoaPhongBan(string maPB);
         SqlDataReader TimPhongBan(string tenPB);
+
+        // Dự án
         DataTable HienThiDuAn();
         bool ThemDuAn(DuAn DA);
         bool SuaDuAn(DuAn DA);
@@ -31,8 +32,9 @@ namespace DAL
         DataTable TimDuAn(string query, string param, string txtTimKiem);
         DataTable TimKiemDA_Ma(string txtMaDA);
         DataTable TimKiemDA_Ten(string txtTenDA);
-        // Tính lương và thống kê lương
-        void ThongKeLuongNV();
+        // Chấm công và tính lương nhân viên
+        bool ChamCongNV(ChamCong CC);
+        List<LuongNV> HienThi_Luong(int ThangLam, int NamLam);
     }
     public class QuanLy: Person, IQuanLy
     {
@@ -339,6 +341,24 @@ namespace DAL
             string query = "Select * from DuAn where TenDA = @TenDA";
             return TimDuAn(query, "TenDA", txtTenDA);
         }
+        // Lấy danh sách mã phòng ban
+        public List<string> Get_MaPB()
+        {
+            List<string> listMaPB = new List<string>();
+            string query = "Select MaPB from PhongBan";
+            SqlConnection conn = DBConnect.ChuoiKetNoi_Hai();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader read = cmd.ExecuteReader();
+            while(read.Read())
+            {
+                string MaPB = read.GetString(0);
+                listMaPB.Add(MaPB);
+            }
+            conn.Close();
+            return listMaPB;
+        }
+
         // Chấm công cho nhân viên
         public bool ChamCongNV(ChamCong CC)
         {
@@ -573,9 +593,6 @@ namespace DAL
             }
             conn.Close();
             return ListLuongNV;
-        }
-        public void ThongKeLuongNV() {
-            
         }
     }
 }

@@ -174,16 +174,11 @@ namespace GUI
             frmCTCC.Show();
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             FormTrang_Chu trangChu = new FormTrang_Chu(maQL);
             this.Hide();
-            trangChu.ShowDialog();
+            trangChu.Show();
         }
     } 
 }

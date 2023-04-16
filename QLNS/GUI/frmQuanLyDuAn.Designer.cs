@@ -37,7 +37,7 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtMaPB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.hienthi = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtMoTaDA = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,7 +58,7 @@
             this.btnThoat_TimKiem = new System.Windows.Forms.PictureBox();
             this.cbBox_TimKiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtGridQLDA = new System.Windows.Forms.DataGridView();
-            this.hienthi = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtMaPB = new System.Windows.Forms.ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -165,8 +165,8 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.hienthi);
             this.guna2Panel2.Controls.Add(this.txtMaPB);
+            this.guna2Panel2.Controls.Add(this.hienthi);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel6);
             this.guna2Panel2.Controls.Add(this.txtMoTaDA);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
@@ -182,29 +182,31 @@
             this.guna2Panel2.Size = new System.Drawing.Size(366, 416);
             this.guna2Panel2.TabIndex = 2;
             // 
-            // txtMaPB
+            // hienthi
             // 
-            this.txtMaPB.BorderColor = System.Drawing.Color.Gray;
-            this.txtMaPB.BorderRadius = 6;
-            this.txtMaPB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaPB.DefaultText = "";
-            this.txtMaPB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaPB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaPB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaPB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaPB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
-            this.txtMaPB.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaPB.ForeColor = System.Drawing.Color.Black;
-            this.txtMaPB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaPB.Location = new System.Drawing.Point(135, 292);
-            this.txtMaPB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtMaPB.Name = "txtMaPB";
-            this.txtMaPB.PasswordChar = '\0';
-            this.txtMaPB.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtMaPB.PlaceholderText = "Nhập...";
-            this.txtMaPB.SelectedText = "";
-            this.txtMaPB.Size = new System.Drawing.Size(209, 38);
-            this.txtMaPB.TabIndex = 9;
+            this.hienthi.BackColor = System.Drawing.Color.Transparent;
+            this.hienthi.BorderRadius = 12;
+            this.hienthi.BorderThickness = 1;
+            this.hienthi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hienthi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.hienthi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.hienthi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.hienthi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.hienthi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.hienthi.FillColor = System.Drawing.Color.White;
+            this.hienthi.FillColor2 = System.Drawing.Color.White;
+            this.hienthi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hienthi.ForeColor = System.Drawing.Color.Black;
+            this.hienthi.HoverState.BorderColor = System.Drawing.Color.White;
+            this.hienthi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
+            this.hienthi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
+            this.hienthi.HoverState.ForeColor = System.Drawing.Color.White;
+            this.hienthi.Location = new System.Drawing.Point(200, 349);
+            this.hienthi.Name = "hienthi";
+            this.hienthi.Size = new System.Drawing.Size(144, 55);
+            this.hienthi.TabIndex = 4;
+            this.hienthi.Text = "Hiển thị";
+            this.hienthi.Click += new System.EventHandler(this.hienthi_Click);
             // 
             // guna2HtmlLabel6
             // 
@@ -559,31 +561,16 @@
             this.dtGridQLDA.TabIndex = 0;
             this.dtGridQLDA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridQLDA_CellClick);
             // 
-            // hienthi
+            // txtMaPB
             // 
-            this.hienthi.BackColor = System.Drawing.Color.Transparent;
-            this.hienthi.BorderRadius = 12;
-            this.hienthi.BorderThickness = 1;
-            this.hienthi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hienthi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.hienthi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.hienthi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.hienthi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.hienthi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.hienthi.FillColor = System.Drawing.Color.White;
-            this.hienthi.FillColor2 = System.Drawing.Color.White;
-            this.hienthi.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hienthi.ForeColor = System.Drawing.Color.Black;
-            this.hienthi.HoverState.BorderColor = System.Drawing.Color.White;
-            this.hienthi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(70)))));
-            this.hienthi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(181)))), ((int)(((byte)(224)))));
-            this.hienthi.HoverState.ForeColor = System.Drawing.Color.White;
-            this.hienthi.Location = new System.Drawing.Point(200, 349);
-            this.hienthi.Name = "hienthi";
-            this.hienthi.Size = new System.Drawing.Size(144, 55);
-            this.hienthi.TabIndex = 4;
-            this.hienthi.Text = "Hiển thị";
-            this.hienthi.Click += new System.EventHandler(this.hienthi_Click);
+            this.txtMaPB.BackColor = System.Drawing.Color.White;
+            this.txtMaPB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtMaPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPB.FormattingEnabled = true;
+            this.txtMaPB.Location = new System.Drawing.Point(135, 293);
+            this.txtMaPB.Name = "txtMaPB";
+            this.txtMaPB.Size = new System.Drawing.Size(209, 37);
+            this.txtMaPB.TabIndex = 9;
             // 
             // frmQuanLyDuAn
             // 
@@ -626,7 +613,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaPB;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2TextBox txtMoTaDA;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
@@ -650,5 +636,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnHienThi;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2GradientButton hienthi;
+        private System.Windows.Forms.ComboBox txtMaPB;
     }
 }

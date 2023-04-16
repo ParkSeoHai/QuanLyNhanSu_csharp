@@ -79,10 +79,5 @@ namespace GUI
             this.Hide();
             fromTinhLuong.ShowDialog();
         }
-
-        private void FormTrang_Chu_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

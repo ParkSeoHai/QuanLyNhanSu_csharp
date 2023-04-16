@@ -231,7 +231,6 @@
             this.Name = "FormTrang_Chu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTrang_Chu";
-            this.Load += new System.EventHandler(this.FormTrang_Chu_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

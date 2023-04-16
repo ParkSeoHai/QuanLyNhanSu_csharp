@@ -87,10 +87,5 @@ namespace GUI
             frmChiTietChamCong frmCTCC = new frmChiTietChamCong(maQL);
             frmCTCC.Show();
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
